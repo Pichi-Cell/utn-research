@@ -1,0 +1,36 @@
+name: 📝 Documentación
+description: Agregar, corregir o mejorar documentación
+title: "docs: <descripción corta>"
+labels: ["docs"]
+assignees: []
+body:
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo
+      options:
+        - Nuevo documento
+        - Corrección / mejora
+        - Traducción
+        - Diagrama / esquemático
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: ¿Qué documentación falta o está incorrecta?
+    validations:
+      required: true
+
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Propuesta
+      description: ¿Qué habría que agregar o cambiar?
+
+  - type: input
+    id: ubicacion
+    attributes:
+      label: Archivo o sección afectada
+      placeholder: "ej: README.md, sección Instalación"

@@ -1,0 +1,61 @@
+name: 🔬 Actividad de laboratorio
+description: Registro de una actividad operativa del lab (medición, ensayo, reunión, etc.)
+title: "actividad: <descripción corta>"
+labels: ["actividad-lab"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Usá este template para registrar actividades del laboratorio que no son desarrollo de código.
+
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de actividad
+      options:
+        - Medición / Ensayo
+        - Reunión de proyecto
+        - Reunión administrativa
+        - Capacitación
+        - Documentación
+        - Mantenimiento de equipamiento
+        - Otro
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción de la actividad
+      description: ¿Qué se va a hacer / se hizo?
+    validations:
+      required: true
+
+  - type: input
+    id: fecha
+    attributes:
+      label: Fecha
+      placeholder: "AAAA-MM-DD"
+    validations:
+      required: true
+
+  - type: input
+    id: duracion
+    attributes:
+      label: Duración estimada
+      placeholder: "ej: 2 horas"
+
+  - type: textarea
+    id: participantes
+    attributes:
+      label: Participantes
+      placeholder: "@usuario1, @usuario2"
+    validations:
+      required: true
+
+  - type: textarea
+    id: resultado
+    attributes:
+      label: Resultado / observaciones
+      description: Completar al cerrar el issue con lo que ocurrió.

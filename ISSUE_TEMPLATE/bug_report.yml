@@ -1,0 +1,68 @@
+name: 🐛 Bug Report
+description: Reportar un comportamiento inesperado o error
+title: "fix: <descripción corta del bug>"
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar el bug. Completá todos los campos para agilizar la resolución.
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción del problema
+      description: ¿Qué ocurre? ¿Qué esperabas que ocurra?
+      placeholder: "Al ejecutar X, ocurre Y. Se esperaba Z."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduccion
+    attributes:
+      label: Pasos para reproducir
+      description: Secuencia mínima para reproducir el problema
+      placeholder: |
+        1. Compilar con flags `...`
+        2. Flashear en la placa `...`
+        3. Observar en el terminal `...`
+    validations:
+      required: true
+
+  - type: textarea
+    id: entorno
+    attributes:
+      label: Entorno
+      description: Hardware, toolchain, versión del firmware, etc.
+      placeholder: |
+        - Placa: STM32F4Discovery
+        - Toolchain: arm-none-eabi-gcc 12.2
+        - SO: Ubuntu 22.04
+        - Commit: abc1234
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / salida relevante
+      description: Pegá aquí cualquier output relevante (terminal, debugger, etc.)
+      render: shell
+
+  - type: dropdown
+    id: prioridad
+    attributes:
+      label: Prioridad
+      options:
+        - Alta — bloquea el trabajo
+        - Media — afecta funcionalidad pero hay workaround
+        - Baja — cosmético o menor
+    validations:
+      required: true
+
+  - type: input
+    id: issue_relacionado
+    attributes:
+      label: Issue relacionado (si aplica)
+      placeholder: "#123"

@@ -1,0 +1,53 @@
+name: ✨ Feature / Tarea técnica
+description: Nueva funcionalidad o tarea de desarrollo
+title: "feat: <descripción corta>"
+labels: ["feature"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Usá este template para proponer o registrar una nueva funcionalidad o tarea técnica.
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción
+      description: ¿Qué hay que implementar? ¿Por qué es necesario?
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: ¿Cómo sabemos que está listo? Listá condiciones verificables.
+      placeholder: |
+        - [ ] El driver inicializa correctamente
+        - [ ] Se puede leer y escribir en el registro X
+        - [ ] Se incluyen tests básicos
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto técnico / referencias
+      description: Links a datasheets, issues relacionados, decisiones previas, etc.
+
+  - type: dropdown
+    id: prioridad
+    attributes:
+      label: Prioridad
+      options:
+        - Alta
+        - Media
+        - Baja
+    validations:
+      required: true
+
+  - type: input
+    id: estimacion
+    attributes:
+      label: Estimación (horas o story points)
+      placeholder: "ej: 4h o 3 SP"
