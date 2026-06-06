@@ -13,9 +13,8 @@ Bienvenido/a al LSE. Este documento es de lectura **obligatoria** antes de comen
 3. [Convenciones de ramas](#3-convenciones-de-ramas)
 4. [Issues: cómo crearlos y gestionarlos](#4-issues-cómo-crearlos-y-gestionarlos)
 5. [Pull Requests: cómo crearlos y gestionarlos](#5-pull-requests-cómo-crearlos-y-gestionarlos)
-6. [Uso de GitHub Projects (Kanban + Scrum)](#6-uso-de-github-projects-kanban--scrum)
-7. [Team Discussions](#7-team-discussions)
-8. [Tarea de onboarding obligatoria](#8-tarea-de-onboarding-obligatoria)
+6. [Uso de GitHub Projects (Kanban)](#6-uso-de-github-projects-kanban)
+7. [Tarea de onboarding obligatoria](#7-tarea-de-onboarding-obligatoria)
 
 ---
 
@@ -25,7 +24,7 @@ La organización maneja tres roles principales. Cada uno tiene permisos distinto
 
 | Rol | Descripción | Permisos |
 |-----|-------------|----------|
-| **Docente** | Responsable técnico o académico de uno o más proyectos. Aprueba PRs y coordina sprints. | Write + Review en todos los repos |
+| **Docente** | Responsable técnico o académico de uno o más proyectos. Aprueba PRs y coordina el trabajo del equipo. | Write + Review en todos los repos |
 | **Becario** | Integrante activo con contraprestación económica. Trabaja en issues asignados. | Write en repos del proyecto asignado |
 | **Colaborador externo** | Participación puntual o temporal. Sin acceso a datos sensibles. | Read o Write limitado por repo |
 
@@ -108,7 +107,7 @@ docs/8-agregar-diagrama-hardware
 | Rama | Descripción | Protección |
 |------|-------------|------------|
 | `main` | Código estable, revisado y aprobado | PR obligatorio + 1 aprobación de `@docentes` |
-| `develop` | Integración continua del sprint actual | PR obligatorio |
+| `develop` | Integración continua antes de pasar a main | PR obligatorio |
 
 **No se hace push directo a `main` ni a `develop`.**
 
@@ -133,7 +132,7 @@ Cada unidad de trabajo debe tener un issue. Esto incluye:
    - **Assignees**: quién lo trabaja
    - **Labels**: tipo y prioridad
    - **Project**: tablero correspondiente (ver sección 6)
-   - **Milestone**: sprint o entrega asociada
+   - **Milestone**: entrega o fecha límite asociada (si aplica)
 
 ### Labels estándar
 
@@ -151,7 +150,7 @@ Cada unidad de trabajo debe tener un issue. Esto incluye:
 ### Ciclo de vida de un issue
 
 ```
-Backlog → To Do (sprint planning) → In Progress → In Review → Done
+Backlog → To Do → In Progress → In Review → Done
 ```
 
 Cuando empezás a trabajar en un issue, movelo a **In Progress** en el tablero y creá la rama correspondiente.
@@ -178,10 +177,9 @@ Cuando una rama está lista para revisión. No esperes a tener todo perfecto: po
 ### Reglas de revisión
 
 - **Nadie mergea su propio PR**
-- Al menos **1 aprobación** de un docente para mergear a `develop`
+- Al menos **1 aprobación** para mergear a `develop`
 - Al menos **1 aprobación** de un docente para mergear a `main`
 - Los comentarios de revisión deben resolverse antes de mergear
-- Usar **Squash and merge** para mantener limpio el historial de `main`
 
 ### Tipos de feedback en revisión
 
@@ -191,7 +189,7 @@ Cuando una rama está lista para revisión. No esperes a tener todo perfecto: po
 
 ---
 
-## 6. Uso de GitHub Projects (Kanban + Scrum)
+## 6. Uso de GitHub Projects (Kanban)
 
 ### Estructura de tableros
 
@@ -213,65 +211,29 @@ Todos los tableros usan las mismas columnas:
 | Columna | Significado |
 |---------|-------------|
 | **Backlog** | Ideas y tareas no planificadas aún |
-| **To Do** | Comprometidas para el sprint actual |
-| **In Progress** | En trabajo activo (máx. 2 por persona) |
-| **In Review** | PR abierto, esperando revisión |
-| **Done** | Completadas y mergeadas |
+| **Todo** | Tareas listas para arrancar |
+| **Bloquedo** | Tareas con las que no se puede avanzar aún |
+| **En proceso** | En trabajo activo (máx. 2 por persona) |
+| **En revisión** | PR abierto, esperando revisión |
+| **Terminado** | Completadas y mergeadas |
 
 ### Campos personalizados de cada item
 
 | Campo | Tipo | Uso |
 |-------|------|-----|
-| `Sprint` | Iteración | Sprint de Scrum asignado |
-| `Estimación` | Número | Story points o horas estimadas |
+| `Estimación` | Número | Horas estimadas |
 | `Tipo` | Select | `Feature / Bug / Docs / Actividad` |
 | `Prioridad` | Select | `Alta / Media / Baja` |
-
-### Scrum en Projects
-
-- **Sprint Planning**: al inicio de cada sprint, mover items de Backlog a To Do
-- **Daily (opcional)**: actualizar el estado de los items en el tablero
-- **Sprint Review**: revisar columna Done al cierre del sprint
-- **Retrospectiva**: documentar en una discusión del team (ver sección 7)
 
 ### Reglas del tablero
 
 - **No cerrar items manualmente**: cerrar el issue o mergear el PR los mueve automáticamente a Done
-- **Límite WIP**: máximo 2 items en **In Progress** por persona
+- **Límite WIP**: máximo 2 items en **En proceso** por persona
 - **Todo item en In Progress debe tener un Assignee**
 
 ---
 
-## 7. Team Discussions
-
-Las Team Discussions son el espacio de comunicación interna por equipo. Se accede desde la organización → **Teams** → seleccionar el team → pestaña **Discussions**.
-
-### Para qué usar discussions
-
-| Uso | Ejemplo |
-|-----|---------|
-| Anuncios del lab | "El viernes no hay laboratorio" |
-| Retrospectivas de sprint | "¿Qué salió bien / mal este sprint?" |
-| Decisiones técnicas | "¿Usamos FreeRTOS o Zephyr?" |
-| Consultas generales | "¿Alguien tiene experiencia con el sensor X?" |
-| Bienvenidas | Post de presentación al unirse al team |
-
-### Cuándo NO usar discussions
-
-- Para reportar bugs o tareas → crear un **Issue**
-- Para cambios de código → abrir un **PR**
-- Para comunicación urgente → usar el canal de comunicación del lab (WhatsApp/Signal/etc.)
-
-### Convenciones
-
-- Usar un título claro y descriptivo
-- Categorizar correctamente la discusión (Announcement / General / Ideas / Q&A)
-- Mencionar al team completo con `@utn-fra-lse/docentes` o `@utn-fra-lse/becarios` cuando corresponda
-- Las retrospectivas de sprint van en `@utn-fra-lse/docentes` con el formato: `Retrospectiva Sprint N — [Proyecto]`
-
----
-
-## 8. Tarea de onboarding obligatoria
+## 7. Tarea de onboarding obligatoria
 
 Para completar el onboarding debés realizar los siguientes pasos. **No se te dará acceso completo a los repositorios hasta completarlos.**
 
@@ -279,23 +241,29 @@ Para completar el onboarding debés realizar los siguientes pasos. **No se te da
 
 (Estás haciéndolo ahora.)
 
-### Paso 2: Completá tu disponibilidad horaria
+### Paso 2: Completá tu planilla de disponibilidad individual
+
+Tu planilla es el registro de los horarios acordados en los que te comprometés a estar en el laboratorio. Debe reflejar tu presencia real y **actualizarse ante cualquier cambio** de horario o modalidad.
 
 1. Hacé un fork de este repositorio (`.github`)
 2. Creá una rama: `feat/horario-<tu-usuario-github>`
 3. Copiá el archivo [`disponibilidad/TEMPLATE.md`](disponibilidad/TEMPLATE.md) y renombralo como `disponibilidad/<tu-usuario-github>.md`
-4. Completá la tabla de disponibilidad y el resto de los campos
+4. Completá la tabla con los horarios a los que te comprometés y el resto de los campos
 5. Abrí un Pull Request a este repositorio con:
    - **Título**: `feat: disponibilidad horaria — @<tu-usuario-github>`
    - **Descripción**: completar el template del PR
    - **Reviewers**: `@utn-fra-lse/docentes`
 
-### Paso 3: Publicá tu presentación en el Team Discussion
+> Si tu disponibilidad cambia en el futuro, abrí un nuevo PR actualizando tu archivo. El historial de Git queda como registro de los cambios acordados.
 
-Ingresá al team al que pertenecés (`docentes` o `becarios`) y creá una nueva Discussion con:
-- **Categoría**: General
-- **Título**: `Presentación — Nombre Apellido`
-- **Contenido**: breve presentación (rol, qué hacés, qué esperás del lab)
+### Paso 3: Agregá tu nombre a la grilla pública de presencia
+
+El archivo [`profile/README.md`](profile/README.md) contiene una tabla con todos los integrantes del laboratorio y sus bloques de presencia semanal. Esta grilla es la vista pública y consolidada de quién está en el lab en cada horario.
+
+En el mismo PR del Paso 2 (misma rama), editá el `profile/README.md` y agregá tu nombre en los bloques horarios que correspondan a tu disponibilidad.
+
+- Si en ese horario ya hay otras personas, agregá tu nombre separado por coma
+- Si la celda está vacía, escribí tu nombre directamente
 
 ---
 
