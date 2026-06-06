@@ -7,19 +7,19 @@ body:
   - type: markdown
     attributes:
       value: |
-        Usá este template para registrar actividades del laboratorio que no son desarrollo de código.
+        Usá este template para registrar actividades del laboratorio que no pertenecen a algún proyecto en particular.
 
   - type: dropdown
     id: tipo
     attributes:
       label: Tipo de actividad
       options:
-        - Medición / Ensayo
-        - Reunión de proyecto
-        - Reunión administrativa
+        - Administrativa
+        - Reunión
         - Capacitación
         - Documentación
-        - Mantenimiento de equipamiento
+        - Relevamiento / Inventario
+        - Desarrollo
         - Otro
     validations:
       required: true
@@ -28,34 +28,6 @@ body:
     id: descripcion
     attributes:
       label: Descripción de la actividad
-      description: ¿Qué se va a hacer / se hizo?
+      description: ¿Qué se va a hacer?
     validations:
       required: true
-
-  - type: input
-    id: fecha
-    attributes:
-      label: Fecha
-      placeholder: "AAAA-MM-DD"
-    validations:
-      required: true
-
-  - type: input
-    id: duracion
-    attributes:
-      label: Duración estimada
-      placeholder: "ej: 2 horas"
-
-  - type: textarea
-    id: participantes
-    attributes:
-      label: Participantes
-      placeholder: "@usuario1, @usuario2"
-    validations:
-      required: true
-
-  - type: textarea
-    id: resultado
-    attributes:
-      label: Resultado / observaciones
-      description: Completar al cerrar el issue con lo que ocurrió.
