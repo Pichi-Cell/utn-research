@@ -1,4 +1,4 @@
-# Disponibilidad — @usuario-github
+# Disponibilidad — @PabloSGomez50
 
 > Completá este archivo y abrí un PR como parte del onboarding.
 > El horario refleja cuándo estás **físicamente presente en el laboratorio**.
@@ -10,7 +10,7 @@
 | Campo | Completar |
 |-------|-----------|
 | **Nombre completo** | Pablo Sebastian Gomez |
-| **Usuario GitHub** | PabloSGomez50 |
+| **Usuario GitHub** | @PabloSGomez50 |
 | **Rol** | Becario |
 | **Fecha de ingreso** | 2026-04-01 |
 
