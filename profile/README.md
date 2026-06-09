@@ -15,9 +15,9 @@ La siguiente grilla refleja los horarios acordados de cada integrante. Se actual
 | 8:00–10:00  |       | Bruno Vega|           |             |             |        |
 | 10:00–12:00 |       | Bruno Vega|           |             |             |        |
 | 12:00–14:00 |       |        |           |             |             |        |
-| 14:00–16:00 |       |        |           |   | |        |
-| 16:00–18:00 |       | Lucio Fuster       |           | Pablo Gomez, Bruno Vega, Alexis Hernandez, Lucio Fuster| Pablo Gomez, Bruno Vega |Bruno Vega|
-| 18:00–20:00 |       | Lucio Fuster       |           |Bruno Vega, Alexis Hernandez, Lucio Fuster   |             | Bruno Vega|
+| 14:00–16:00 |       |        |           | Fausto Alvarez Mollo  | |        |
+| 16:00–18:00 |       | Lucio Fuster       |           | Pablo Gomez, Bruno Vega, Alexis Hernandez, Lucio Fuster, Fausto Alvarez Mollo| Pablo Gomez, Bruno Vega |Bruno Vega|
+| 18:00–20:00 |       | Lucio Fuster       |           |Bruno Vega, Alexis Hernandez, Lucio Fuster, Fausto Alvarez Mollo  |             | Bruno Vega|
 | 20:00–22:00 |       |        |           | Alexis Hernandez             |             |        |
 
 > _Para ver la disponibilidad detallada de cada integrante, consultá los archivos en [`disponibilidad/`](../disponibilidad/)._
