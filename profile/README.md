@@ -16,7 +16,7 @@ La siguiente grilla refleja los horarios acordados de cada integrante. Se actual
 | 10:00–12:00 |       | Bruno Vega|           |             |             |        |
 | 12:00–14:00 |       |        |           |             |             |        |
 | 14:00–16:00 |       |        |           | Fausto Alvarez Mollo  | |        |
-| 16:00–18:00 |       | Lucio Fuster       |           | Pablo Gomez, Bruno Vega, Alexis Hernandez, Lucio Fuster, Fausto Alvarez Mollo| Pablo Gomez, Bruno Vega |Bruno Vega, Lara Steinbrecher|
+| 16:00–18:00 |       | Lucio Fuster       |           | Pablo Gomez, Bruno Vega, Alexis Hernandez, Lucio Fuster, Fausto Alvarez Mollo| Pablo Gomez, Bruno Vega, Lara Steinbrecher |Bruno Vega|
 | 18:00–20:00 |       | Lucio Fuster, Lara Steinbrecher       |           |Bruno Vega, Alexis Hernandez, Lucio Fuster, Fausto Alvarez Mollo, Lara Steinbrecher  |             | Bruno Vega|
 | 20:00–22:00 | Lara Steinbrecher      |  Lara Steinbrecher      |           | Alexis Hernandez             |             |        |
 
